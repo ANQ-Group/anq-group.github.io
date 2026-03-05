@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>ANQ Group | Web Design & Enterprise Architecture in Armenia | طراحی سایت در ارمنستان</title>
+    <meta name="title" content="ANQ Group | Web Design & Enterprise Architecture in Armenia">
+    <meta name="description" content="Top-tier web design, enterprise architecture, and microservices in Yerevan, Armenia. طراحی حرفه‌ای سایت، اپلیکیشن و سامانه‌های سازمانی در ارمنستان با معماری میکروسرویس.">
+    <meta name="keywords" content="طراحی سایت در ارمنستان, طراحی سایت ارمنستان, web design armenia, enterprise architecture, microservices, ANQ Group, Yerevan web development">
+    <meta name="author" content="Alireza Atashnejad">
+    
+    <meta name="google-site-verification" content="fc7d24a747db122d" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://anq-group.github.io/">
+    <meta property="og:title" content="ANQ Group | Enterprise Architecture & Web Design">
+    <meta property="og:description" content="طراحی سایت در ارمنستان. Building scalable marketplaces and high-performance Enterprise solutions in Yerevan, Armenia.">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://anq-group.github.io/">
+    <meta property="twitter:title" content="ANQ Group | Enterprise Architecture & Web Design">
+    <meta property="twitter:description" content="طراحی سایت در ارمنستان. Building scalable marketplaces and high-performance Enterprise solutions.">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "ANQ Group",
+      "url": "https://anq-group.github.io/",
+      "telephone": "+37491165863",
+      "email": "alirezaatashnejad@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Yerevan",
+        "addressCountry": "AM"
+      },
+      "description": "ارائه خدمات تخصصی طراحی سایت در ارمنستان، معماری سیستم‌های سازمانی، و پیاده‌سازی میکروسرویس‌ها روی سرورهای اختصاصی. Web design and enterprise architecture in Armenia.",
+      "founder": {
+        "@type": "Person",
+        "name": "Alireza Atashnejad"
+      }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #050505;
+            --surface-color: #111111;
+            --border-color: #222222;
+            --text-primary: #ffffff;
+            --text-secondary: #a1a1aa;
+            --accent-color: #ffffff;
+            --glow-color: rgba(255, 255, 255, 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        h1, h2, h3 {
+            letter-spacing: -0.03em;
+        }
+
+        .hero {
+            padding: 8rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, var(--glow-color) 0%, transparent 70%);
+            z-index: -1;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(180deg, #fff 0%, #a1a1aa 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p.subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            font-weight: 300;
+        }
+
+        .hero p.hosting-note {
+            font-size: 1rem;
+            color: var(--text-primary);
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 1rem;
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+        }
+
+        .projects-section {
+            padding: 4rem 0 8rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            border-color: #444;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1rem;
+        }
+
+        .project-number {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            font-family: monospace;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .badge-soon {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            background: #222;
+            color: #aaa;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            letter-spacing: 0.05em;
+        }
+
+        .project-desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-item {
+            font-size: 0.75rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            color: #ddd;
+        }
+
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-info a:hover {
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .grid { grid-template-columns: 1fr; }
+            .contact-info { flex-direction: column; gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Engineering Digital Ecosystems</h1>
+            <p class="subtitle">
+                We specialize in the architecture, system design, and end-to-end development of scalable microservices and enterprise-grade software solutions in Armenia.
+            </p>
+            <p class="hosting-note">
+                <strong>Deployment & Infrastructure:</strong> We completely handle the implementation, deploying the final architecture directly to our high-performance servers, fully configured with your custom domain.
+            </p>
+        </section>
+
+        <section class="projects-section">
+            <h2 class="section-title">Selected Works & Platforms</h2>
+            <div class="grid">
+                
+                <div class="card">
+                    <div class="card-header">
+                        <span class="project-number">01</span>
+                        <h3 class="project-title">ANQ.am</h3>
+                    </div>
+                    <p class="project-desc">Led the project end-to-end — from architecture and system design to production deployment. Built a fully scalable enterprise-grade platform powered by a C# / .NET microservices backend with GraphQL APIs. The system includes multiple dedicated panels, an integrated ATS module, intelligent job matching, and advanced search capabilities.</p>
+                    <div class="tech-stack">
+                        <span class="tech-item">C# / .NET</span>
+                        <span class="tech-item">TypeScript</span>
+                        <span class="tech-item">Next.js</span>
+                        <span class="tech-item">GraphQL</span>
+                        <span class="tech-item">PostgreSQL</span>
+                        <span class="tech-item">Redis</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="project-number">02</span>
+                        <h3 class="project-title">Dorob.am</h3>
+                    </div>
+                    <p class="project-desc">Delivered the platform end-to-end. Built using a C# / .NET microservices backend with TypeScript-based frontend services. Developed high-performance crawlers in Python (FastAPI) for large-scale data aggregation. Implemented advanced search with Elasticsearch and integrated OpenAI APIs for automated text translation.</p>
+                    <div class="tech-stack">
+                        <span class="tech-item">C# / .NET</span>
+                        <span class="tech-item">TypeScript</span>
+                        <span class="tech-item">Python</span>
+                        <span class="tech-item">FastAPI</span>
+                        <span class="tech-item">Elasticsearch</span>
+                        <span class="tech-item">OpenAI API</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="project-number">03</span>
+                        <h3 class="project-title">Jaamjahani.com</h3>
+                    </div>
+                    <p class="project-desc">Designed and developed the system end-to-end using a modular, scalable architecture for news publishing and live sports data management. Engineered for scalability, performance, and reliability during high-traffic live events.</p>
+                    <div class="tech-stack">
+                        <span class="tech-item">Next.js</span>
+                        <span class="tech-item">WebSocket</span>
+                        <span class="tech-item">REST APIs</span>
+                        <span class="tech-item">Redis</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="project-number">04</span>
+                        <h3 class="project-title">News Platform</h3>
+                    </div>
+                    <p class="project-desc">High-load news and data platform with real-time updates, scalable APIs, and strong reliability targets.</p>
+                    <div class="tech-stack">
+                        <span class="tech-item">Microservices</span>
+                        <span class="tech-item">Redis</span>
+                        <span class="tech-item">WebSocket</span>
+                        <span class="tech-item">Next.js</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="project-number">05</span>
+                        <h3 class="project-title">Mersad.co</h3>
+                    </div>
+                    <p class="project-desc">Enterprise workflow and industrial management solutions with custom modules and scalable backend services.</p>
+                    <div class="tech-stack">
+                        <span class="tech-item">C# / .NET</span>
+                        <span class="tech-item">TypeScript</span>
+                        <span class="tech-item">PostgreSQL</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="project-number">06</span>
+                        <h3 class="project-title">Tabasheer.com</h3>
+                    </div>
+                    <p class="project-desc">E-commerce/service platform with integrated payment flows, order management, and scalable data handling.</p>
+                    <div class="tech-stack">
+                        <span class="tech-item">Next.js</span>
+                        <span class="tech-item">Node.js</span>
+                        <span class="tech-item">PostgreSQL</span>
+                        <span class="tech-item">Payments</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="project-number">07</span>
+                        <h3 class="project-title">Havalearzi.com <span class="badge-soon">Soon</span></h3>
+                    </div>
+                    <p class="project-desc">Currency exchange and financial tracking system planned for deployment.</p>
+                    <div class="tech-stack">
+                        <span class="tech-item">TypeScript</span>
+                        <span class="tech-item">C# / .NET</span>
+                        <span class="tech-item">GraphQL</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="project-number">08</span>
+                        <h3 class="project-title">Darinrooz.ir <span class="badge-soon">Soon</span></h3>
+                    </div>
+                    <p class="project-desc">Modern retail and inventory management platform.</p>
+                    <div class="tech-stack">
+                        <span class="tech-item">Next.js</span>
+                        <span class="tech-item">C# / .NET</span>
+                        <span class="tech-item">PostgreSQL</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="project-number">09</span>
+                        <h3 class="project-title">Sogandstar.com <span class="badge-soon">Soon</span></h3>
+                    </div>
+                    <p class="project-desc">E-commerce and advanced inventory management platform.</p>
+                    <div class="tech-stack">
+                        <span class="tech-item">Next.js</span>
+                        <span class="tech-item">C# / .NET</span>
+                        <span class="tech-item">PostgreSQL</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="contact-info">
+                <a href="mailto:alirezaatashnejad@gmail.com">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    alirezaatashnejad@gmail.com
+                </a>
+                <a href="tel:+37491165863">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    +374 91 165 863
+                </a>
+            </div>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">&copy; 2026 ANQ Group. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
